@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & input Tags</title>
+</head>
+<body>
+    <form action="">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname">
+        <br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname">
+        <br><br>
+
+        <label for="userpswd">Password:</label>
+        <input type="password" name="userpswd" id="userpswd">
+        <br><br>
+
+        <input type="submit" value="Signup">
+        <input type="reset" value="Reset Data">
+        <br><br><br>
+
+        <p>What is your Gender?</p>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Female</label>
+        <input type="radio" name="gender" id="female">
+        <br><br><br>
+
+        <p>What is your Hobby?</p>
+        <input type="checkbox" name="hobby1" id="hobby1">
+        <label for="hobby1">Reading</label>
+        <input type="checkbox" name="hobby2" id="hobby2">
+        <label for="hobby1">Writing</label>
+        <input type="checkbox" name="hobby3" id="hobby3">
+        <label for="hobby1">Cricket</label>
+        <br><br>
+
+        <input type="button" value="Click Me" onclick="alert('Some info came')">
+        <br><br>
+
+        <input type="color" name="bgcol" id="bgcol" value="#FFCFEE">
+        <br><br>
+
+        <input type="date" name="date" max="2024-05-17" min="2024-01-01" value="2024-03-22"> <br>
+
+        <input type="file" name="myfile" id="myfile" accept="image/*, .pdf,  .mp4"><br><br>
+
+        <input type="month" name="mymonth" value="2023-03" min="2023-02"><br>
+
+        <input type="time" name="mytime" value="12:09:09"><br>
+
+        <input type="datetime-local" value="2024-05-15T03:09:56"><br>
+
+        <input type="week" name="myweek" value="2024-W08">
+        <br>
+        <input type="number" min="4" max="40" value="12" step="4"><br><br>
+
+        <label for="myage">What is Your Age?</label>
+        <input type="range" name="myage" id="myage" min="18" max="60" value="24" step="5">
+    </form>
+</body>
+</html>

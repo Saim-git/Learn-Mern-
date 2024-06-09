@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit.js" target="_blank">
+        <input type="text" name="username" value="Muheet" disabled>
+        <input type="text" name="username1" value="Muheet" readonly>
+        <input type="text" name="username2" value="Muheet">
+        <br><br>
+        
+        <input type="email" name="myemail" autocomplete="off">
+        <br><br>
+        
+        <input type="file" name="myfile" capture="user">
+        <input type="file" name="myfile" capture="environment">
+        
+        <!-- capture="user" meant to open Front camera -->
+        <!-- capture="environment" meant to open Back camera; but both of them works only on Mobile; On PC, they opens file Manager only -->
+        
+        <input type="password" name="pswd" maxlength="10" placeholder="Enter password">
+        <input type="tel" name="pswd" maxlength="10" required>
+        <input type="submit" value="Submit">
+        
+        <p>What is your Age?</p>
+        <select name="age" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+        </select>
+<br><br>
+
+<textarea name="message" cols="30" rows="10" style="max-width: 200px; min-width: 200px; max-height: 300px; min-height: 300px;"></textarea>
+<br><br>
+
+<button onclick="alert('Hey there, you are not supposed to click this!')">Don't Click</button>
+<br><br>
+
+<fieldset>
+    <legend>Login</legend>
+    <input type="text" name="myusername" placeholder="Enter username" list="myname">
+    <datalist id="myname">
+        <option value="name1"></option>
+        <option value="name2"></option>
+        <option value="name3"></option>
+        <option value="name4"></option>
+    </datalist>
+
+    <input type="text" name="mypswd" placeholder="Enter password">
+    <input type="submit" value="Sign in" formaction="SomeOtherPath">
+</fieldset>
+    </form>
+    </body>
+</html>

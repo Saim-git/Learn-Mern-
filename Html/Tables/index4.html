@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<style>
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th{
+        padding: 10px;
+        color: navy;
+        font-size: 20px;
+        
+    }
+    td{
+        padding: 16px;
+        color: rgb(255, 0, 0);
+        font-size: 10px;
+        text-align: center;
+        border: 2px solid rgb(1, 1, 67);
+    }
+    thead{
+        border: 2px solid rgb(1, 1, 67);
+        background-color: aquamarine;
+    }
+    </style>
+<body>
+    <table>
+        <caption>Percentages with Names</caption>
+        <!-- Irrespective of where you place this caption tag in table tag; it will gonna show on top.  -->
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Saim</td>
+                <td rowspan="2">99%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sameer</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Muheet</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Alam</td>
+                <td>79%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Muheet is a Winner</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

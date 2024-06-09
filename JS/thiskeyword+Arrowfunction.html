@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./image1.png" width="40%" height="40% ">
+    <script>
+        //This Keyword-->
+        let obj = {
+            name: "Muheet",
+            age: 23,
+            givedetails: function () {
+                // return `The name of the person is ${this.name} and age is ${this.age}`
+                console.log(this);
+            },
+            givedetails2: () => {
+                // return `The name of the person is ${this.name} and age is ${this.age}` //Arrow function does not binds with this keyword, so it returns undefined here.
+                console.log(this);
+            }
+        }
+
+        console.log("Normal function-", obj.givedetails());
+        console.log("Arrow function-", obj.givedetails2());
+        console.log(this);
+
+
+
+        //Arrow Function-->
+
+        let sum = (a, b) => {
+            return a + b;
+        }
+
+        let product = (a, b) => a * b;
+
+        console.log(sum(4, 5));
+        console.log(product(4, 5));
+
+    </script>
+</body>
+
+</html>

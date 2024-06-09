@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Promises are objects which lets asynchronous methods return values like synchronous methods, it has 3 states,
+    pending, fulfilled, reject.
+    <script>
+        //   function makeMaggi(raw) {
+        // let pr = new Promise((resolve, reject) => {
+        //     if (raw != undefined) {
+        //         setTimeout(() => {
+        //             resolve("Maggi is ready...")
+        //         },3000)
+        //     }
+        //     else {
+        //         reject("Not Ready")
+        //     }
+        // })
+        // return pr;
+        // }
+
+        // console.log(makeMaggi("maggi"));
+
+        // console.log("Start");
+
+        // makeMaggi(1).then((res)=>{ // then is a function used to declare what should be done in case of resolve
+        //     console.log("Resolve",res);
+        // }).catch((err)=>{  // catchis a function used to declare what should be done in case of reject
+        //     console.log("Reject",err);
+        // })
+
+        // console.log("End");
+
+
+
+        //Promise Chaining
+        task1 = (raw) => {
+            let pr1 = new Promise((resolve, reject) => {
+                if (raw != undefined) {
+                    setTimeout(() => {
+                        resolve("Task1 Done");
+                    }, 2000)
+                }
+                else {
+                    reject("Task1 Not ready");
+                }
+            })
+            return pr1;
+        }
+        task2 = (raw) => {
+            let pr1 = new Promise((resolve, reject) => {
+                if (raw != undefined) {
+                    setTimeout(() => {
+                        resolve("Task2 Done");
+                    }, 2000)
+                }
+                else {
+                    reject("Task2 Not ready");
+                }
+            })
+            return pr1;
+        }
+        task3 = (raw) => {
+            let pr1 = new Promise((resolve, reject) => {
+                if (raw != undefined) {
+                    setTimeout(() => {
+                        resolve("Task3 Done");
+                    }, 2000)
+                }
+                else {
+                    reject("Task3 Not ready");
+                }
+            })
+            return pr1;
+        }
+        task1(1).then((res) => {
+            console.log("Task1 is Completed.")
+            return task2(res);
+        }).then((res2) => {
+            console.log("Task2 is Completed.")
+            return task3(res2);
+        }).then((res3) => {
+            console.log("Task3 is Completed.")
+        }).catch((err) => {
+            console.log(err) //Only 1 catch will be enough to show reject statement of any chained promise
+        })
+
+
+        // console.log(task1(1).then((res) => {
+        //     console.log("Task1 is Completed.")
+        //     return task2(res);
+        // }))
+    </script>
+</body>
+
+</html>
